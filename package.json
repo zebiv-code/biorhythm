@@ -1,0 +1,15 @@
+{
+  "name": "biorhythm",
+  "version": "1.0.0",
+  "description": "Interactive biorhythm chart showing physical, emotional, and intellectual cycles.",
+  "author": "Bill Heyman <bill@heyman.ai> (https://billheyman.com)",
+  "license": "MIT",
+  "homepage": "https://zebiv.com/biorhythm/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zebiv-code/biorhythm/"
+  },
+  "scripts": {
+    "start": "npx serve web -l 3000"
+  }
+}

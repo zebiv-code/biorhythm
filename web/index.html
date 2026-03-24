@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biorhythm — heyman.ai</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/controls.css">
+<link rel="stylesheet" href="css/chart.css">
+<link rel="stylesheet" href="css/info-cards.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Biorhythm Chart</h1>
+    <p>Discover your natural physical, emotional, and intellectual cycles</p>
+  </header>
+
+  <div class="controls">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="birthdate">Your Birthdate</label>
+        <input type="date" id="birthdate">
+      </div>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter name">
+      </div>
+    </div>
+    <div class="nav-row">
+      <button id="prevMonth" class="secondary">Previous Month</button>
+      <button id="currentMonth">Current Month</button>
+      <button id="nextMonth" class="secondary">Next Month</button>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-header">
+      <div id="monthDisplay" class="month-display"></div>
+      <div class="legend">
+        <span class="legend-item physical">Physical (23 days)</span>
+        <span class="legend-item emotional">Emotional (28 days)</span>
+        <span class="legend-item intellectual">Intellectual (33 days)</span>
+      </div>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="bioChart" width="1000" height="400"></canvas>
+    </div>
+  </div>
+
+  <div class="info-cards">
+    <div class="card physical-card">
+      <h3>Physical State</h3>
+      <div class="card-value" id="physicalValue">--</div>
+      <div class="card-desc" id="physicalDesc">Enter your birthdate</div>
+    </div>
+    <div class="card emotional-card">
+      <h3>Emotional State</h3>
+      <div class="card-value" id="emotionalValue">--</div>
+      <div class="card-desc" id="emotionalDesc">Enter your birthdate</div>
+    </div>
+    <div class="card intellectual-card">
+      <h3>Intellectual State</h3>
+      <div class="card-value" id="intellectualValue">--</div>
+      <div class="card-desc" id="intellectualDesc">Enter your birthdate</div>
+    </div>
+  </div>
+
+  <div id="tooltip" class="tooltip"></div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/calculations.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

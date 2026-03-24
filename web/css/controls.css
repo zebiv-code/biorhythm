@@ -1,0 +1,94 @@
+/* Controls */
+.controls {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.5rem 0.7rem;
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+input[type="date"] { width: 180px; }
+input[type="text"] { width: 180px; }
+
+/* Color scheme fix for date input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.7);
+}
+
+.nav-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+button.secondary {
+  border-color: var(--border);
+  color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+button.secondary:hover {
+  background: var(--surface2);
+  color: var(--text);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  input[type="date"], input[type="text"] { width: 150px; }
+  .nav-row { flex-direction: column; }
+  .nav-row button { width: 100%; }
+}
