@@ -1,0 +1,49 @@
+/* Info Cards */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.card-desc {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+
+.physical-card { border-top: 2px solid var(--physical); }
+.emotional-card { border-top: 2px solid var(--emotional); }
+.intellectual-card { border-top: 2px solid var(--intellectual); }
+
+.physical-card .card-value { color: var(--physical); }
+.emotional-card .card-value { color: var(--emotional); }
+.intellectual-card .card-value { color: var(--intellectual); }
+
+/* Responsive */
+@media (max-width: 700px) {
+  .info-cards { grid-template-columns: 1fr; }
+}
